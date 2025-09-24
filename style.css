@@ -1,0 +1,231 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --bg-color: #63151a;
+  --text-color: #f8eded;
+  --secondary-text: #f6f5f5;
+  --card-bg: #b6a6a8;
+  --card-hover: #e59d9d;
+  --accent: #491c1c;
+}
+
+body.light-mode {
+  --bg-color: #ca8989;
+  --text-color: #3d0808;
+  --secondary-text: #5e2b2e;
+  --card-bg: #ffffff;
+  --card-hover: #53141e;
+  --accent: #350e0e;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: var(--card-bg);
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--accent);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+}
+.hero-content {
+  max-width: 500px;
+}
+.hero h1 {
+  font-size: 2.5em;
+}
+.hero h1 span {
+  color: var(--accent);
+}
+.hero p {
+  color: var(--secondary-text);
+}
+.buttons {
+  margin-top: 20px;
+}
+.btn, .btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+}
+.social-icons a {
+  margin: 10px;
+  font-size: 1.5em;
+  color: var(--accent);
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: var(--text-color);
+}
+.hero-img img {
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* About Section */
+.about {
+  padding: 80px 50px;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--secondary-text);
+}
+
+/* Projects Section */
+.projects {
+  padding: 80px 50px;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.project-card:hover {
+  background: var(--card-hover);
+  transform: translateY(-5px);
+}
+.project-card h3 {
+  margin-top: 0;
+}
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 50px;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact input, .contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contact button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card-bg);
+  color: var(--secondary-text);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+#theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+}
